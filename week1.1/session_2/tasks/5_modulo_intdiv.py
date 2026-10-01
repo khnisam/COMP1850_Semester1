@@ -17,10 +17,12 @@ for row in data:
     # for each of these, we need to work out how to turn 'minutes_late' into the right value
     # for example: if minutes_late is 2000, then days = 1, hours = 9, minutes = 20
     # hint: there are 1440 minutes in a day (24 * 60)
-    
-    days = 0
-    hours = 0
-    minutes = 0
+
+    days = minutes_late//1440
+    daysRemainder = minutes_late % 1440
+    hours = daysRemainder//60
+    hoursRemainder = hours % 60
+    minutes = hoursRemainder
     
     print(f"Student {row[0]}: {days}D {hours}H {minutes}M")
 

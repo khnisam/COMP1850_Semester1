@@ -1,13 +1,27 @@
-# Fill out the code to make a very simple calculator
+num1 = int(input("Enter number 1 "))
+num2 = int(input("Enter number 2 "))
 
-# ask the user to enter number1:
+print("Please choose an arithmetic operation using the numbers relating to the operation.")
+arithmeticOperation = int(input("1: + |2: - |3: * |4: /"))
+
+if arithmeticOperation == 1:
+    result = num1 + num2
+    print(result)
+elif arithmeticOperation == 2:
+    result = num1 - num2
+    print(result)
+elif arithmeticOperation == 3:
+    result = num1 * num2
+    print(result)
+elif arithmeticOperation == 4:
+    result = num1 / num2
+    print(result)
+else:
+    print("Invalid Choice")
 
 
-# ask the user to enter number 2:
 
 
-# calculate the result of adding those numbers together
 
 
-# print out the answer
 
