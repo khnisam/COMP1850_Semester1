@@ -1,20 +1,33 @@
 """
 Portfolio Task - Week 1
 By submitting this code you are declaring that all work in this file, other than any provided template code, was written and developed by you independently.
-Name: 
+Name: Isam
 """
 
 name = input("What is your name? ")
-print(f"Welcome to LeedsBank's savings calculator {name}!")
+try:
+    userName = int(name)
+    print("That is not a valid name")
+except ValueError:
+    print(f"Welcome to LeedsBank's savings calculator {name}!")
 
-# Ask the user to input an amount they want to save every month - this should be an integer.
-# Validate that they have entered an integer.
+    moneySaving = input("Enter how much money you would like to save every month. ")
+    try:
+        number = int(moneySaving)
+        if number >= 0:
+            yearlySaving = number * 12
+            interestSaving = yearlySaving + (yearlySaving * 0.008)
+            round(interestSaving, 2)
+            print(f"You have chosen to save £{number} per month!")
+            print(f"You will save £{yearlySaving} per annum!")
+            print(f"Your total amount of money saved including interest will be £{interestSaving:.2f} per year")
+        else:
+            print("Invalid amount")
+    except ValueError:
+        print("Invalid amount")
 
 
-# Calculate the total amount of money they will have saved by the end of the year (amount per month multiplied by 12).
-# print this out for the user with a suitable message.
 
 
-# Calculate the total amount of money including interest (0.8% of the final annual amount) they will have saved in a year.
-# print this out in the format £X.XX (to two decimal places).
+
 

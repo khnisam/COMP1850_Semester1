@@ -15,10 +15,23 @@
 # Download your file, and upload it to the 'Week 1 Session 2 - Practice Upload' task on Minerva.
 # You will get some feedback - ensure you are passing the tests!
 
-num1 = int(input("Enter number 1 "))
-num2 = int(input("Enter number 1 "))
-result = num1 * num2
-print(result)
+num1 = input("Enter number 1 ")
+try: 
+    number = int(num1)
+    num2 = input("Enter number 2 ")
+    try:
+        number = int(num2)
+        result = int(num1) * int(num2)
+        print(result)
+    except ValueError:
+        print("That is not a number")
+except ValueError:
+    print("That is not a number")
+
+
+
+
+
 
 
     
