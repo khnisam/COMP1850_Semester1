@@ -15,6 +15,21 @@ print(food)
 
 # Add an item to fruit
 
+fruit.add("grape")
+print(fruit)
+
 # Remove an item from vegetables
 
+vegetables.remove("leek")
+print(vegetables)
+
 # Find and display symmetric difference of the two sets
+
+intersectPrime = fruit.symmetric_difference(vegetables)
+print(intersectPrime)
+
+# testing
+
+data = ["apple", "orange", "apple", "grape"]
+unique_data = list(set(data))
+print(unique_data)
