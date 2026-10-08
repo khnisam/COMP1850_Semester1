@@ -56,6 +56,16 @@ while menuCondition == True:
                 presStatus = "Low"
         else:
             print("That is not a valid machine state. Please enter the values again.")
+
+        if status == 1:
+            if (tempStatus == "High") or (presStatus == "High"):
+                print("The machine is running at unsafe conditions, please shut it down. ")
+            elif ((tempStatus == "Normal") or (tempStatus == "Low")) and ((presStatus == "Normal") or (presStatus == "Low")):
+                print("Everything is running normally,")
+        elif status == 0:
+            print("The machine is not turned on yet, no action is required. ")
+        else:
+            print("Not a valid machine state.")
     except ValueError:
             print("Certain values that you have entered are not a numerical value. Please enter a valid set of numbers.")
 
