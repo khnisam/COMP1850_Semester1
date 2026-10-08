@@ -3,12 +3,18 @@
 
 # Prompt the user to enter their age
 
-age = int(input("Enter your age: "))
+age = input("Enter your age: ")
+try:
+    userAge = int(age)
+    if userAge >= 18: 
+        print("You are eligible to vote.")
+    elif userAge < 0:
+        print("That is not a valid age.")
+    else:
+        print("You are not eligible to vote yet.")
+except ValueError:
+    print("That is not a number.")
 
-# Use an if statement to check if the user is 18 or over
-# (Replace XXX with a suitable boolean expression)
+    
 
-if XXX: 
-    print("You are eligible to vote.")
-else:
-    print("You are not eligible to vote yet.")
+
