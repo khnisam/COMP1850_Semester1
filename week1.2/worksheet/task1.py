@@ -13,11 +13,10 @@ try:
         elif (grade >= 70) and (grade <= 100):
             print(f"{grade} is a Distinction")
     else:
-        print("Error: Grade must be an integer between 0 and 100")
-        sys.exit("Error!")
+        sys.exit("Error: Grade must be an integer between 0 and 100")
 except ValueError:
-    print("Error: Grade must be an integer between 0 and 100")
-    sys.exit("Error!")
+    
+    sys.exit("Error: Grade must be an integer between 0 and 100")
 
 
 
