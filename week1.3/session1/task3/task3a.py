@@ -3,11 +3,12 @@
 i = 0
 
 while i < 20:
-    if i % 3 != 0:
-        print(i)
-        i = i + 1
-    else:
+    i = i + 1
+    if ((i % 3) == 0):
         continue
+    print(i)
+        
+        
 
 # Add logic using continue so that multiples of 3 are not printed out
 # Hint: we discused operators such as % and // in recent weeks
