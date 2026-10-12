@@ -6,12 +6,53 @@ Name:
 
 states = { "red":4, "red_amber":3, "green":5, "amber":3 }
 
+
 systime = 0
-maxtime = int(input())  # read an integer number of steps (>0)
-
+running_condition = True
 state = "red"
+maxtime = input()
+try:
+    TMax = int(maxtime)
+    if TMax > 0:
 
-print(f"Time {systime:03} State {state}")
+        while running_condition:
+            for key in states.keys():
+                if (running_condition == True):
+                    state = key
+                    duration = states[state]
+                    for count in range(duration):
+                        print(f"Time {systime:03d} State {state}")
+                        if systime == TMax:
+                            running_condition = False
+                            break
+                        else:
+                            systime = systime + 1
+                else:
+                    break
+
+    else:
+        print("Step must be greater than 0")
+
+except ValueError:
+    print("Not an integer")
+
+
+
+    
+
+
+        
+
+                
+
+            
+            
+
+
+
+
+
+
 
 # Simulate the traffic light system up to time=maxtime in 1-second steps
 
