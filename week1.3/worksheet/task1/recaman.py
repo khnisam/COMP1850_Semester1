@@ -2,17 +2,16 @@
 
 L = int(input("Length of sequence: ")) # this should be your only input
 
-i = 1
-sequence = [0]
-for i in range(L):
-    trial = sequence[i] - i+1
-    if trial > 0:
-        a = sequence[i] - i+1
-        sequence.append(a)
-    elif trial < 0:
-        a = sequence[i] + i+1
-        sequence.append(a)
 
+sequence = [0]
+for i in range(1,L):
+    trial = sequence[i-1] - (L - (L-i))
+    if (trial > 0) and (trial not in sequence):
+        a = sequence[i-1] - (L - (L-i))
+        sequence.append(a)
+    else:
+        a = sequence[i-1] + (L - (L-i))
+        sequence.append(a)
 
 print(sequence)
 
@@ -26,4 +25,4 @@ print(sequence)
 
 #[print(item) for item in sequence]    # this method is reasonably independent of the choice of data structure
 
-# The web page https://en.wikipedia.org/wiki/Recam%C3%A1n%27s_sequence shows about 80 numbers in the sequence
+ # The web page https://en.wikipedia.org/wiki/Recam%C3%A1n%27s_sequence shows about 80 numbers in the sequence
