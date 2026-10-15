@@ -9,15 +9,30 @@
 # open and read the file
 
 
-logins = []
+
 
 with open("site.txt", "r") as file:
     for line in file:
         if line == "Date,Time,IP_Address,User_Agent,Request,Status_Code\n":
             continue
         else:
-            logins.append(line)
-            print(logins)
+            data = line.strip().split(",")
+            if (data[4] == "POST /login") and (data[5] == "401"):
+                print(f"IP address {data[2]} failed to login at {data[1]} on {data[0]}")
+            else:
+                continue
+            
+                
+            
+            
+
+
+    
+
+
+
+
+
             
 
 
