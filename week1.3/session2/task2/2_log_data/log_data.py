@@ -5,7 +5,21 @@
 # human-readable format.
 
 
+
 # open and read the file
+
+logins = []
+with open("/workspaces/COMP1850_Semester1/week1.3/task2/2_log_data/site.txt", "r") as file:
+    for line in file:
+        if line == "Date,Time,IP_Address,User_Agent,Request,Status_Code":
+            continue
+        else:
+            logins.append(line)
+
+print(logins)
+
+
+
 
 # find all failed login attempts (POST /login with the response 401)
 # and print these out in a human-readable format:

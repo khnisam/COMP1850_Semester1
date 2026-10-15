@@ -2,7 +2,6 @@
 
 L = int(input("Length of sequence: ")) # this should be your only input
 
-
 sequence = [0]
 for i in range(1,L):
     trial = sequence[i-1] - (L - (L-i))
