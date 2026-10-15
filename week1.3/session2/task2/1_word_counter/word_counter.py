@@ -8,7 +8,6 @@ word_count = 0
 strings = []
 with open("/workspaces/COMP1850_Semester1/week1.3/session2/task2/1_word_counter/glasses.txt", "r") as file:
     for line in file:
-        print(line)
         words = line
         word_count = word_count + len(words.split())
 

@@ -8,15 +8,33 @@
 
 # open and read the file
 
+
 logins = []
-with open("/workspaces/COMP1850_Semester1/week1.3/task2/2_log_data/site.txt", "r") as file:
+
+with open("site.txt", "r") as file:
     for line in file:
-        if line == "Date,Time,IP_Address,User_Agent,Request,Status_Code":
+        if line == "Date,Time,IP_Address,User_Agent,Request,Status_Code\n":
             continue
         else:
             logins.append(line)
+            print(logins)
+            
 
-print(logins)
+
+
+
+
+
+
+    
+
+
+
+
+
+        
+
+
 
 
 
