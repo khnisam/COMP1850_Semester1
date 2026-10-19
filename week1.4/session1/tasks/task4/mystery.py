@@ -10,16 +10,18 @@
 
 # function implementation
 
-def mystery_func(string):
-    upper = 0
-    lower = 0
+def mystery_func(string): #input data type is a sentence and string
+    upper = 0 #defines the number of uppercase characters in string
+    lower = 0 #defines the number of lowercase characters in string
 
     for ch in string:
-        if ch.isupper():
+        if ch.isupper(): #checks if index in string is either uppercase or lowercase, if upper then increment upper
             upper += 1
-        if ch.islower():
+        if ch.islower(): #checks if index in string is lower, if lower then increment lower
             lower += 1
-    return (upper, lower)
+    return (upper, lower) #returns the number of lowercase and uppercase characters. This will be integer
+
+
 
 
 # testing
@@ -35,4 +37,4 @@ print(mystery_func("ABC"))
 # to see if you are right?
 
 # print(mystery_func("X"))
-# print(mystery_func("[2, 3]"))
+print(mystery_func("[2, 3]"))

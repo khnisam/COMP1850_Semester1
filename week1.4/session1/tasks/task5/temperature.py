@@ -29,5 +29,10 @@ def celsius_to_fahrenheit(celsius):
 # test the functions
 
 celsius = float(input("Enter temperature in Celsius: "))
+if valid_temperature(celsius) ==  True:
+    conversion = celsius_to_fahrenheit(celsius)
+    print(f"Converted Value: {conversion}")
+else:
+    print("The temperature is out of range. ")
 
 # Complete the rest of the code here
