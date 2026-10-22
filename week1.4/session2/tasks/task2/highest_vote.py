@@ -17,6 +17,30 @@ def most_frequent_string(votes):
         - None, None: if votes is empty.
     """
 
+    if len(votes) == 0:
+        return "none", "none"
+
+    dictionary = {}
+    mySet = set(votes)
+    for i in mySet:
+        counter = votes.count(i)
+        dictionary.update({i:counter})
+
+    value = dictionary.values()
+    maximum = max(value)
+    highest_key = max(dictionary, key=dictionary.get)
+    element = highest_key
+    occurence = maximum
+
+    return element, occurence
+
+
+
+
+    
+    
+
+
     # Your task is to complete the body of the function based on the details in the docstring.
     # Hint 1: You can complete this task with for loops or comprehensions 
     # Hint 2: Think about the properties of the various collection-types
@@ -30,6 +54,7 @@ names = ['Jesy', 'Leigh-Anne', 'Perrie', 'Leigh-Anne', 'Jade',
          'Leigh-Anne', 'Jade', 'Jesy', 'Jade', 'Perrie', 'Jade',
          'Jade', 'Jesy', 'Perrie', 'Perrie', 'Jade', 'Leigh-Anne',
          'Jesy', 'Jesy', 'Perrie', 'Jesy']
+
 
 
 # Check if correct output is produced
