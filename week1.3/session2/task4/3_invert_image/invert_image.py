@@ -4,6 +4,37 @@
 # You can use the relative path ../images/filename
 # You could handle file errors with try/except
 
+with open("../images/feep.pgm", "r") as infile:
+    data1 = infile.readline().strip()
+    data2 = infile.readline().strip()
+    max_gray = int(infile.readline().strip())
+
+    with open("../images/feep_inverted.pgm", "w") as outfile:
+        outfile.write(f"{data1}\n")
+        outfile.write(f"{data2}\n")
+        outfile.write(f"{max_gray}\n")
+
+        for line in infile:
+            string = line.strip().split()
+            for i in range(len(string)):
+                original_pixel_value = int(string[i])
+                invert_pixel_value = max_gray - original_pixel_value
+                string[i] = invert_pixel_value
+        
+            string_line = " ".join(str(item) for item in string)
+            outfile.write(string_line + "\n")
+        
+        
+        
+    
+    
+
+
+
+
+
+
+
 # Create inverted image
 # the formula: invert_pixel_value = max_gray - original_pixel_value
 
