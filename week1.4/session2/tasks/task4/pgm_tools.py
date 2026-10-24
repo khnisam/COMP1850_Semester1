@@ -26,7 +26,18 @@ def writePGM( filename, image ):
     Input: filename string, image tuple data
     Output: None
     '''
-    width,height,max_gray,pixels = image  # unpack the tuple
+    width, height, max_gray, pixels = image  # unpack the tuple
+
+    with open("../images/feep_duplicate.pgm", "w") as outfile:
+        outfile.write("P2\n")
+        width_organised = " ".join(str(n) for n in width)
+        height_organised = " ".join(str(n) for n in height)
+        outfile.write(f"{width_organised} {height_organised}\n")
+        outfile.write(max_gray + "\n")
+        outfile.write(pixels)
+        
+
+
 
     # open a file for writing
     # write the data in PGM format
@@ -50,7 +61,7 @@ def invertPGM( image ):
 
 # code to test the PGM functions
 
-image = readPGM("images/feep.pgm")
+image = readPGM("../images/feep.pgm")
 
 print(f"Image with width {image[0]} and height {image[1]}")
 print(f"{image[3]}")

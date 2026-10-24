@@ -20,6 +20,18 @@ def digits_sum(number):
     # complete your code here
     # base case
 
+    valid = int(number)
+
+    if number == 0:
+        return 0
+    elif number < 0:
+        return "Ignore"
+    elif valid == False:
+        return "Ignore"
+
+    return (number % 10 + digits_sum(number//10))
+
+
     # recursive case
 
 
@@ -29,3 +41,13 @@ print(digits_sum(12345))  # Output: 15
 
 
 # Once completed, your next task is to write an equivalent function that uses loops.
+
+
+def digits_sum_2(num):
+    sum = 0
+    string = str(num)
+    for item in string:
+        sum = sum + int(item)
+    return sum
+
+print(digits_sum_2(24))
