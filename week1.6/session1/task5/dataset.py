@@ -27,7 +27,7 @@ class QuakeDataset:
         self.feed = feed
         self.data = []
 
-    def read_feed(self):
+    def read_feed(self, lines):
         """
         Refreshes this dataset with data from the linked feed.
 
