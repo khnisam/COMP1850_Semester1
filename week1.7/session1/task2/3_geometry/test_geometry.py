@@ -14,11 +14,26 @@ def test_point_distance():
 def test_point_distance_to():
     p1 = Point(0, 0)
     p2 = Point(3, 4)
+    assert p1.distance_to(p2) == 5.0
     
     # complete the implementation for
     # testing distance_to()
     
 
+
 # Write test functions to test the __init__(), 
 # area() and perimeter() methods in Circle class
 # you can use the default value for centre coordinates
+
+def test_circle_constructor():
+    default = (0,0)
+    c = Circle(5, default)
+    assert c.radius == 5
+    assert c.centre == (0,0)
+
+def test_circle_area():
+    assert Circle(5).area() == 78.53981633974483
+
+def test_circle_perimeter():
+    assert Circle(5).perimeter() == 31.41592653589793
+
