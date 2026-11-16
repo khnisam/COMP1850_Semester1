@@ -2,7 +2,7 @@
 
 import random
 
-random.seed(10)
+random.seed(10) #the random number generator requires a number to start with, in order to generate a random number, each seed will give you consistent values.
 
 num1 = random.randint(1, 100)
 num2 = random.randint(1, 100)
